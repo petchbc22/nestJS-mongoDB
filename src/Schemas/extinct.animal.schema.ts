@@ -13,7 +13,7 @@ export const extinctAnimalSchema = new mongoose.Schema(
         lat : String,
         lng : String
          }]
-  },
+  }, 
   {
     versionKey: false,
   },
