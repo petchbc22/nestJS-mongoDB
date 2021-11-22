@@ -12,6 +12,12 @@ export class UserController {
     return this.service.create(user);
     // console.log(animal)
   }
+  
+  @Get(':name')
+  findOne(@Param('name') name: string) {
+    return this.service.findOne(name);
+  }
+
   @Post('update')
   async Update(@Body() user: any) {
     await this.service.update(user);

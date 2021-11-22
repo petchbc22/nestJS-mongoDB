@@ -11,6 +11,9 @@ export class UsersService {
   async getAll() {
     return await this.userModel.find();
   }
+  async findOne(Name: string) {
+    return this.userModel.findOne({Name});
+  }
   async create(user){
     const createUser = new this.userModel(user);
     return await createUser.save();
