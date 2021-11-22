@@ -7,7 +7,7 @@ import { ExtinctAnimal } from '../Models/extinct.animals.model';
 export class ExtinctAnimalService {
   constructor(
     @InjectModel('ExtinctAnimals')
-    private readonly extinctAnimalModel: Model<ExtinctAnimal>,
+    private readonly extinctAnimalModel: Model<any>,
   ) {}
   async getAll() {
     return await this.extinctAnimalModel.find();
